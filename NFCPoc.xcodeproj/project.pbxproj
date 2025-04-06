@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		929A73DF2DA3360000CBB635 /* CoreNFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929A73DD2DA335C300CBB635 /* CoreNFC.framework */; };
+		929A73E02DA3360000CBB635 /* CoreNFC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 929A73DD2DA335C300CBB635 /* CoreNFC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		92591E3C2DA32AE500F8CBFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -23,10 +28,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		929A73E12DA3360000CBB635 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				929A73E02DA3360000CBB635 /* CoreNFC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		92591E252DA32AE100F8CBFB /* NFCPoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFCPoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92591E3B2DA32AE500F8CBFB /* NFCPocTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NFCPocTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92591E452DA32AE500F8CBFB /* NFCPocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NFCPocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		929A73DD2DA335C300CBB635 /* CoreNFC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreNFC.framework; path = System/Library/Frameworks/CoreNFC.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -65,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929A73DF2DA3360000CBB635 /* CoreNFC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +112,7 @@
 				92591E272DA32AE100F8CBFB /* NFCPoc */,
 				92591E3E2DA32AE500F8CBFB /* NFCPocTests */,
 				92591E482DA32AE500F8CBFB /* NFCPocUITests */,
+				929A73DC2DA335C300CBB635 /* Frameworks */,
 				92591E262DA32AE100F8CBFB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +127,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		929A73DC2DA335C300CBB635 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				929A73DD2DA335C300CBB635 /* CoreNFC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,6 +145,7 @@
 				92591E212DA32AE100F8CBFB /* Sources */,
 				92591E222DA32AE100F8CBFB /* Frameworks */,
 				92591E232DA32AE100F8CBFB /* Resources */,
+				929A73E12DA3360000CBB635 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -287,8 +318,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NFCPoc/NFCPoc.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5K5USCTN64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NFCPoc/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -296,6 +329,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,8 +348,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NFCPoc/NFCPoc.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5K5USCTN64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NFCPoc/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -323,6 +359,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
